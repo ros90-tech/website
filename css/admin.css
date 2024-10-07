@@ -1,0 +1,126 @@
+body {
+    font-family:'Poppins', sans-serif;
+    background-color:rgb(0,0,33);
+    margin: 0;
+}
+
+.admin-container {
+    width: 80%;
+    margin: 0 auto;
+    background:rgb(19,19,66);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #2383f07b;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:  rgb(0,0,33);
+    color: plum;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    color: lightpink;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #222;
+}
+#logout-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+@media (max-width: 768px) {
+    .admin-container {
+        width: 95%;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}

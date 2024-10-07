@@ -1,0 +1,216 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(0,0,33);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(19, 19, 66);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: lightblue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color:#3165ad;
+}
+
+main {
+    padding: 20px;
+}
+
+.skills-section {
+    text-align: center;
+    padding: 60px;
+}
+
+.skills-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: plum;
+}
+
+.skills-section p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+    background-color: #7c6767;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-bar h3 {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #493c3c;
+    color: #fff;
+    text-align: center;
+}
+
+.skill-bar .bar {
+    width: 0;
+    height: 30px;
+    background-color: rgb(139, 104, 222);
+    border-radius: 20px;
+    transition: width 2s ease;
+}
+
+.skill-bar[data-skill="90"] .bar {
+    width: 90%;
+}
+
+.skill-bar[data-skill="85"] .bar {
+    width: 85%;
+}
+
+.skill-bar[data-skill="80"] .bar {
+    width: 80%;
+}
+
+.skill-bar[data-skill="60"] .bar {
+    width: 60%;
+}
+
+.skill-bar[data-skill="50"] .bar {
+    width: 50%;
+}
+
+/* Awards Section */
+.awards-section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.awards-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: plum;
+    margin-bottom: 30px;
+}
+
+.award {
+    margin-bottom: 20px;
+}
+
+.award h3 {
+    font-size: 22px;
+    color: #84b83a;
+}
+
+.award p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .skills-section h1 {
+        font-size: 28px;
+    }
+
+    .skills-section p {
+        font-size: 16px;
+    }
+
+    .skills-container {
+        width: 90%;
+    }
+
+    .skill-bar h3 {
+        font-size: 16px;
+    }
+
+    .awards-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .skills-section h1 {
+        font-size: 24px;
+    }
+
+    .skills-section p {
+        font-size: 14px;
+    }
+
+    .skill-bar h3 {
+        font-size: 14px;
+    }
+
+    .award h3 {
+        font-size: 18px;
+    }
+
+    .award p {
+        font-size: 16px;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}

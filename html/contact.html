@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us - Captured Moments</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Captured Moments</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="skills and awards.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Get in touch with us for any inquiries or to book your session!</p>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your email..." required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+                    <div class="button-container"> 
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-box">
+                <h3>Our Location</h3>
+                <p>Tinkune, Gairigaun Kathmandu, Nepal</p>
+            </div>
+            <div class="info-box">
+                <h3>Email Us</h3>
+                <p>capturemoments@gmail.com</p>
+            </div>
+            <div class="info-box">
+                <h3>Call Us</h3>
+                <p>+977 9841313475</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Captured Moments. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Retrieve form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a message object
+            const messageObject = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Retrieve existing messages from local storage or initialize an empty array
+            const existingMessages = JSON.parse(localStorage.getItem('messages')) || [];
+            // Add the new message to the array
+            existingMessages.push(messageObject);
+            // Save the updated messages back to local storage
+            localStorage.setItem('messages', JSON.stringify(existingMessages));
+
+            // Optionally, clear the form after submission
+            document.getElementById('contact-form').reset();
+
+            // Optional: Alert the user
+            alert('Message submitted successfully!');
+        });
+    </script>
+</body>
+</html>
